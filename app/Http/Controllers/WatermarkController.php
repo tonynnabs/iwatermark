@@ -9,7 +9,7 @@ class WatermarkController extends Controller
 {
     public function remove(Request $request)
     {
-        $watermarkedImage = 'storage/'.$request->markImage->store('watermark');
+        $watermarkedImage = 'storage/' .$request->markImage->store('watermark');
         $photo = fopen($watermarkedImage, 'r');
 
         /**
