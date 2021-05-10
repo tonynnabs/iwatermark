@@ -14,13 +14,22 @@ class WatermarkController extends Controller
 
         $mask = 'storage/watermark/mask.png';
         $mask_photo = fopen($mask, 'r');
+
+        /**uploading image and mask to server */
         $response = Http::attach(
             'image', $photo, $watermarkedImage
         )->attach(
             'mask', $mask_photo, $mask
         )->post('http://3.20.22.15:8080/predict')->json();
 
-        dd($response);
+        /** formating response to a proper JSON format */
+        $response = $this->formatResponse($response);
+
+        /** parsing JSON file to get image url */
+        $response = json_decode($response, true);
+        foreach($response['watermarks'] as $image => $path){
+            dd($path['output_image']);
+        }
 
         return view('remove');
     }
@@ -29,27 +38,12 @@ class WatermarkController extends Controller
      * formatting string response to correct json format
      *
      * @param string $response
-     * @return JSON
+     * @return string
      */
     private function formatResponse($response)
     {
         $response = str_replace("'", '"', $response);
         $response = str_replace("T", 't', $response);
         return $response;
-    }
-
-    /**
-     * creating json file and saving response to it
-     *
-     * @param JSON $response
-     * @return mixed
-     */
-    private function createJsonFile($data)
-    {
-        $file = fopen('storage/watermark/predict.json','w');
-        fwrite($file, $data);
-        fclose($file);
-        return $jsonUrl = 'storage/watermark/predict.json';
-
     }
 }
