@@ -12,68 +12,17 @@ class WatermarkController extends Controller
         $watermarkedImage = 'storage/' .$request->markImage->store('watermark');
         $photo = fopen($watermarkedImage, 'r');
 
-        /**
-         * API Call to the first server function
-         */
+        $mask = 'storage/watermark/mask.png';
+        $mask_photo = fopen($mask, 'r');
         $response = Http::attach(
             'image', $photo, $watermarkedImage
-        )->post(config('services.iwatermark.server_1_url'))->json();
-        $response = $this->formatResponse($response); //formatting string response to json
-        $firstJsonUrl = $this->createJsonFile($response); //saving json response to a file
+        )->attach(
+            'mask', $mask_photo, $mask
+        )->post('http://3.20.22.15:8080/predict')->json();
 
-
-        /**
-         * API Call to the second server function
-         */
-        $response = $this->secondServer($firstJsonUrl, $watermarkedImage);
-        $response = $this->formatResponse($response); //formatting string response to json
-        $secondJsonUrl = $this->createJsonFile($response); //saving json response to a file
-
-
-        /**
-         * API Call to the third server function
-         */
-        $response = $this->thirdServer($secondJsonUrl);
         dd($response);
 
         return view('remove');
-    }
-
-    /**
-     * second server api call
-     *
-     * @param string $jsonUrl
-     * @param string $image
-     * @return string
-     */
-    private function secondServer($jsonUrl, $image)
-    {
-        $json_url_open = fopen($jsonUrl, 'r');
-        $photo = fopen($image, 'r');
-
-        return $response = Http::attach(
-            'image', $photo, $image
-        )->attach(
-            'upload_file', $json_url_open, $jsonUrl
-        )->post(config('services.iwatermark.server_2_url'))->json();
-
-        return $response;
-    }
-
-    /**
-     * Api call
-     *
-     * @param string $secondJson
-     * @return string
-     */
-    private function thirdServer($secondJson)
-    {
-        $json_url_open = fopen($secondJson, 'r');
-        $response = Http::attach(
-            'upload_file',  $json_url_open, $secondJson
-        )->post(config('services.iwatermark.server_3_url'))->json();
-
-        return $response;
     }
 
     /**
