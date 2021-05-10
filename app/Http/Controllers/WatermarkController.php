@@ -93,12 +93,12 @@ class WatermarkController extends Controller
      * creating json file and saving response to it
      *
      * @param JSON $response
-     * @return string
+     * @return mixed
      */
-    private function createJsonFile($response)
+    private function createJsonFile($data)
     {
         $file = fopen('storage/watermark/predict.json','w');
-        fwrite($file, $response);
+        fwrite($file, $data);
         fclose($file);
         return $jsonUrl = 'storage/watermark/predict.json';
 
