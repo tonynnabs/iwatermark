@@ -17,14 +17,8 @@
     </header>
     <main>
         <section class=" h-screen flex justify-center items-center relative">
-            <div
-                style="border-radius: 2.5rem; background-image: url('/img/strokes.svg')"
-                class="bg-center cover h-4/5 bg-green-50 w-4/5 flex flex-col justify-start items-center p-9">
-                <h1 class="text-gray-800 md:text-5xl text-2xl  text-center font-bold leading-tight">Watermark <br> Removal Tool
-                </h1>
+            @livewire('file-upload')
 
-                @livewire('file-upload')
-            </div>
         </section>
 
         {{-- <div class="container bg-white h-96 w-full mx-auto flex mt-10 justify-center items-center">

@@ -12,15 +12,17 @@ class FileUpload extends Component
     use WithFileUploads;
 
     public $photo;
+    public $showDownloadModal = false;
+    public $downloadUrl ='';
 
-    public function test()
-    {
-        sleep(10);
-        dd('hello');
-    }
 
     public function save()
     {
+
+        $this->validate([
+            'photo' => 'image|max:25000',
+        ]);
+
         ini_set('max_execution_time', 600);
         $filename = $this->photo->store('/', 'watermark');
         $fileUrl = Storage::disk('watermark')->path($filename);
@@ -42,10 +44,12 @@ class FileUpload extends Component
         /** parsing JSON file to get image url */
         $response = json_decode($response, true);
         foreach($response['watermarks'] as $image => $path){
-            dd($path['output_image']);
+            $this->downloadUrl = $path['output_image'];
         }
+        $this->showDownloadModal = true;
+        Storage::disk('watermark')->delete($filename);
+        $this->photo = '';
 
-        // return redirect()->to('/download');
     }
 
 
