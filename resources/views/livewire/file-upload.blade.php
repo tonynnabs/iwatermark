@@ -23,13 +23,12 @@
 
                 <input class="hidden" type="file" id="photo" wire:model="photo">
                 <button
-                    wire:dirty.class="spinner"
-                    wire:target="photo"
                     wire:click="save"
-                    class="z-50 text-white bg-main py-3 px-7 rounded-xl"
+                    class="z-50 text-white bg-main py-3 px-7 rounded-xl focus:outline-none flex justify-center items-center"
                     @if (!$photo)
                         style="pointer-events: none;"
                     @endif>
+                    <span class="spinner mr-5" wire:loading></span>
                     @if ($photo)
                         Remove Watermark
                     @else

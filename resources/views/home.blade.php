@@ -3,15 +3,15 @@
         <nav class="flex container mx-auto justify-between items-center px-3 py-5">
             <h1>Iwatermark</h1>
             <ul class="md:flex justify-between font-medium hidden">
-                <li class="px-5 hover:text-main">Home</li>
-                <li class="px-5 hover:text-main">How it works</li>
-                <li class="px-5 hover:text-main">Developers</li>
+                <li class="px-5 hover:text-main transition ease-in-out duration-300">Home</li>
+                <li class="px-5 hover:text-main transition ease-in-out duration-300" >How it works</li>
+                <li class="px-5 hover:text-main transition ease-in-out duration-300">Developers</li>
             </ul>
             <div>
                 <button
                     class="font-bold">Login</button>
                 <button
-                    class="rounded-lg px-4 font-bold text-sm ml-3 py-3 bg-main transition ease-in-out duration-300 text-white">Register</button>
+                    class="hover:bg-main-dark rounded-lg px-4 font-bold text-sm ml-3 py-3 bg-main transition ease-in-out duration-300 text-white">Register</button>
             </div>
         </nav>
     </header>

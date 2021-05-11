@@ -12,24 +12,25 @@ class WatermarkController extends Controller
         $watermarkedImage = 'storage/' .$request->markImage->store('watermark');
         $photo = fopen($watermarkedImage, 'r');
 
-        $mask = 'storage/mask/mask.png';
-        $mask_photo = fopen($mask, 'r');
+        dd($photo);
+        // $mask = 'storage/mask/mask.png';
+        // $mask_photo = fopen($mask, 'r');
 
-        /**uploading image and mask to server */
-        $response = Http::attach(
-            'image', $photo, $watermarkedImage
-        )->attach(
-            'mask', $mask_photo, $mask
-        )->post('http://3.20.22.15:8080/predict')->json();
+        // /**uploading image and mask to server */
+        // $response = Http::attach(
+        //     'image', $photo, $watermarkedImage
+        // )->attach(
+        //     'mask', $mask_photo, $mask
+        // )->post('http://3.20.22.15:8080/predict')->json();
 
-        /** formating response to a proper JSON format */
-        $response = $this->formatResponse($response);
+        // /** formating response to a proper JSON format */
+        // $response = $this->formatResponse($response);
 
-        /** parsing JSON file to get image url */
-        $response = json_decode($response, true);
-        foreach($response['watermarks'] as $image => $path){
-            dd($path['output_image']);
-        }
+        // /** parsing JSON file to get image url */
+        // $response = json_decode($response, true);
+        // foreach($response['watermarks'] as $image => $path){
+        //     dd($path['output_image']);
+        // }
 
         return view('remove');
     }
