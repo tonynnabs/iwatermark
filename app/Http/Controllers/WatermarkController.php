@@ -12,7 +12,7 @@ class WatermarkController extends Controller
         $watermarkedImage = 'storage/' .$request->markImage->store('watermark');
         $photo = fopen($watermarkedImage, 'r');
 
-        $mask = 'storage/watermark/mask.png';
+        $mask = 'storage/mask/mask.png';
         $mask_photo = fopen($mask, 'r');
 
         /**uploading image and mask to server */

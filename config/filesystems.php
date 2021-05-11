@@ -35,6 +35,13 @@ return [
             'root' => storage_path('app'),
         ],
 
+        'watermark' => [
+            'driver' => 'local',
+            'root' => storage_path('app/watermark'),
+            'url' => env('APP_URL').'/watermark',
+            'visibility' => 'public',
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
@@ -66,7 +73,7 @@ return [
     */
 
     'links' => [
-        public_path('storage') => storage_path('app/public'),
+        public_path('watermark') => storage_path('app/watermark'),
     ],
 
 ];

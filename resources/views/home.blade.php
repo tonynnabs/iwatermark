@@ -1,11 +1,11 @@
-<x-guest-layout>
+<x-app-layout>
     <header>
         <nav class="flex container mx-auto justify-between items-center px-3 py-5">
             <h1>Iwatermark</h1>
-            <ul class="flex justify-between font-bold">
-                <li class="px-5">Home</li>
-                <li class="px-5">How it works</li>
-                <li class="px-5">Developers</li>
+            <ul class="md:flex justify-between font-medium hidden">
+                <li class="px-5 hover:text-main">Home</li>
+                <li class="px-5 hover:text-main">How it works</li>
+                <li class="px-5 hover:text-main">Developers</li>
             </ul>
             <div>
                 <button
@@ -16,11 +16,14 @@
         </nav>
     </header>
     <main>
-        <section class=" h-screen flex justify-center items-center">
+        <section class=" h-screen flex justify-center items-center relative">
             <div
                 style="border-radius: 2.5rem; background-image: url('/img/strokes.svg')"
-                class="bg-center cover h-4/5 bg-green-50 w-4/5 flex justify-center items-start p-9">
-                <h1 class="text-gray-800 text-5xl text-center font-bold leading-tight">Watermark <br> Removal Tool</h1>
+                class="bg-center cover h-4/5 bg-green-50 w-4/5 flex flex-col justify-start items-center p-9">
+                <h1 class="text-gray-800 md:text-5xl text-2xl  text-center font-bold leading-tight">Watermark <br> Removal Tool
+                </h1>
+
+                @livewire('file-upload')
             </div>
         </section>
 
@@ -40,4 +43,4 @@
         </div> --}}
     </main>
 
-</x-guest-layout>
+</x-app-layout>

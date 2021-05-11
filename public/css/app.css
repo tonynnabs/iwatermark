@@ -29711,6 +29711,48 @@ select {
   --tw-backdrop-sepia: sepia(100%);
 }
 
+.spinner {
+  position: relative;
+  color: transparent !important;
+  pointer-events: none;
+}
+
+.spinner::after {
+  content: '';
+  position: absolute !important;
+  top: calc(50% - (1em / 2));
+  left: calc(50% - (1em / 2));
+  display: block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid #dae1e7;
+  border-radius: 9999px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  -webkit-animation: spinAround 500ms infinite linear;
+          animation: spinAround 500ms infinite linear;
+}
+
+@-webkit-keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -58502,6 +58544,28 @@ select {
 
   .sm\:backdrop-sepia {
     --tw-backdrop-sepia: sepia(100%);
+  }
+
+  .sm\:spinner {
+    position: relative;
+    color: transparent !important;
+    pointer-events: none;
+  }
+
+  .sm\:spinner::after {
+    content: '';
+    position: absolute !important;
+    top: calc(50% - (1em / 2));
+    left: calc(50% - (1em / 2));
+    display: block;
+    width: 1em;
+    height: 1em;
+    border: 2px solid #dae1e7;
+    border-radius: 9999px;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    -webkit-animation: spinAround 500ms infinite linear;
+            animation: spinAround 500ms infinite linear;
   }
 }
 
@@ -87297,6 +87361,28 @@ select {
   .md\:backdrop-sepia {
     --tw-backdrop-sepia: sepia(100%);
   }
+
+  .md\:spinner {
+    position: relative;
+    color: transparent !important;
+    pointer-events: none;
+  }
+
+  .md\:spinner::after {
+    content: '';
+    position: absolute !important;
+    top: calc(50% - (1em / 2));
+    left: calc(50% - (1em / 2));
+    display: block;
+    width: 1em;
+    height: 1em;
+    border: 2px solid #dae1e7;
+    border-radius: 9999px;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    -webkit-animation: spinAround 500ms infinite linear;
+            animation: spinAround 500ms infinite linear;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -116090,6 +116176,28 @@ select {
 
   .lg\:backdrop-sepia {
     --tw-backdrop-sepia: sepia(100%);
+  }
+
+  .lg\:spinner {
+    position: relative;
+    color: transparent !important;
+    pointer-events: none;
+  }
+
+  .lg\:spinner::after {
+    content: '';
+    position: absolute !important;
+    top: calc(50% - (1em / 2));
+    left: calc(50% - (1em / 2));
+    display: block;
+    width: 1em;
+    height: 1em;
+    border: 2px solid #dae1e7;
+    border-radius: 9999px;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    -webkit-animation: spinAround 500ms infinite linear;
+            animation: spinAround 500ms infinite linear;
   }
 }
 
@@ -144885,6 +144993,28 @@ select {
   .xl\:backdrop-sepia {
     --tw-backdrop-sepia: sepia(100%);
   }
+
+  .xl\:spinner {
+    position: relative;
+    color: transparent !important;
+    pointer-events: none;
+  }
+
+  .xl\:spinner::after {
+    content: '';
+    position: absolute !important;
+    top: calc(50% - (1em / 2));
+    left: calc(50% - (1em / 2));
+    display: block;
+    width: 1em;
+    height: 1em;
+    border: 2px solid #dae1e7;
+    border-radius: 9999px;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    -webkit-animation: spinAround 500ms infinite linear;
+            animation: spinAround 500ms infinite linear;
+  }
 }
 
 @media (min-width: 1536px) {
@@ -173678,6 +173808,28 @@ select {
 
   .\32xl\:backdrop-sepia {
     --tw-backdrop-sepia: sepia(100%);
+  }
+
+  .\32xl\:spinner {
+    position: relative;
+    color: transparent !important;
+    pointer-events: none;
+  }
+
+  .\32xl\:spinner::after {
+    content: '';
+    position: absolute !important;
+    top: calc(50% - (1em / 2));
+    left: calc(50% - (1em / 2));
+    display: block;
+    width: 1em;
+    height: 1em;
+    border: 2px solid #dae1e7;
+    border-radius: 9999px;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    -webkit-animation: spinAround 500ms infinite linear;
+            animation: spinAround 500ms infinite linear;
   }
 }
 
