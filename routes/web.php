@@ -20,6 +20,10 @@ Route::get('/', function () {
 });
 
 Route::post('/remove', [WatermarkController::class, 'remove'])->name('mark.run');
+Route::post('/download', [WatermarkController::class, 'remove'])->name('mark.run');
+Route::get('/download', function () {
+    return view('download');
+});
 Route::post('/rapid', [RapidController::class, 'run'])->name('rapid.run');
 
 
