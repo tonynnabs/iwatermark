@@ -1,4 +1,5 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require('tailwindcss/colors')
 
 module.exports = {
     purge: [
@@ -9,10 +10,17 @@ module.exports = {
     ],
 
     theme: {
-        backgroundColor: (theme) => ({
-            ...theme("colors"),
+        colors: {
             main: "#a970ff",
-        }),
+            black: colors.black,
+            white: colors.white,
+            gray: colors.trueGray,
+            indigo: colors.indigo,
+            red: colors.rose,
+            yellow: colors.amber,
+            green: colors.emerald,
+            blue: colors.blue,
+          },
         extend: {
             fontFamily: {
                 sans: ["Manrope", ...defaultTheme.fontFamily.sans],
